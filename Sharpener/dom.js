@@ -12,7 +12,7 @@ Item.style.borderBottom= 'solid 3px #000'
 
 header.style.borderBottom= 'solid 3px #000';
 
-//get element by Class name
+//getElementsByClassName
 
 var items = document.getElementsByClassName('list-group-item')
 
