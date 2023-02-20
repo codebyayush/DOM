@@ -22,6 +22,7 @@ for (var i=0; i<items.length; i++){
     items[i].style.fontWeight = 'bold';
 }
 
+
 //getElementsByTagName
 
 // var li = document.getElementsByTagName('li')
@@ -34,7 +35,7 @@ for (var i=0; i<items.length; i++){
 
 
 
-//task 5
+//task 5 getelementbytagname
 
 var items= document.getElementsByClassName('list-group-item1')
 
