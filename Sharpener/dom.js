@@ -12,7 +12,7 @@ Item.style.borderBottom= 'solid 3px #000'
 
 header.style.borderBottom= 'solid 3px #000';
 
-//getElementsByClassName
+//task4  getElementsByClassName
 
 var items = document.getElementsByClassName('list-group-item')
 
@@ -22,3 +22,26 @@ for (var i=0; i<items.length; i++){
     items[i].style.fontWeight = 'bold';
 }
 
+//getElementsByTagName
+
+// var li = document.getElementsByTagName('li')
+
+// li[2].style.backgroundColor = 'green';
+
+// for (var i=0; i<li.length; i++){
+//     li[i].style.fontWeight = 'bold';
+// }
+
+
+
+//task 5
+
+var items= document.getElementsByClassName('list-group-item1')
+
+items[0].style.backgroundColor = 'blue'
+items[0].style.color = 'white'
+
+var li = document.getElementsByTagName('li')
+
+li[4].style.backgroundColor = 'orange'
+li[4].style.color = 'white'
