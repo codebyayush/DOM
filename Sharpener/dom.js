@@ -11,3 +11,14 @@ Item2.style.borderBottom = 'solid 2px #000'
 Item.style.borderBottom= 'solid 3px #000'
 
 header.style.borderBottom= 'solid 3px #000';
+
+//get element by Class name
+
+var items = document.getElementsByClassName('list-group-item')
+
+items[2].style.backgroundColor = 'green';
+
+for (var i=0; i<items.length; i++){
+    items[i].style.fontWeight = 'bold';
+}
+
