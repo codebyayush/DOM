@@ -46,3 +46,29 @@ var li = document.getElementsByTagName('li')
 
 li[4].style.backgroundColor = 'orange'
 li[4].style.color = 'white'
+
+
+
+//querySelector task 6
+
+var item = document.querySelector('.list-group-item:nth-child(2)')
+
+// item.style.backgroundColor = 'green'
+
+// var item = document.querySelector(".list-group-item:nth-child(3)").style.display = "none";
+
+
+//querySelectorAll task
+
+var lis = document.querySelectorAll('.list-group-item')
+
+console.log(lis)
+lis[3].style.color = "green"
+
+var ul = document.querySelectorAll('li:nth-child(odd)')
+
+console.log(ul)
+
+for(i=0; i < ul.length; i++){
+    ul[i].style.backgroundColor = "green"; 
+}
