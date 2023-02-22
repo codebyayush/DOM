@@ -1,11 +1,16 @@
 var form = document.getElementById('addForm')
 var itemList = document.getElementById('items')
+var filter = document.getElementById('filter')
 
 //submit event
 form.addEventListener('submit', addItem)
 
 //delete event
 itemList.addEventListener('click', removeItem)
+
+//filter event
+filter.addEventListener('keyup', filterItems)
+
 
 
 //additem
@@ -14,8 +19,8 @@ function addItem(e){
 
     //getinputvalue
     var newItem = document.getElementById('item').value
+    var newItem2 = document.getElementById('item2').value
 
-    
     //create new li element
     var li  = document.createElement('li')
 
@@ -23,8 +28,8 @@ function addItem(e){
     li.className = 'list-group-item'
 
     //Add text node with input value
-
     li.appendChild(document.createTextNode(newItem))
+    li.appendChild(document.createTextNode(newItem2))
 
     //create del button
     var deleteBtn = document.createElement('li')
@@ -50,10 +55,8 @@ function addItem(e){
     //Append button to list
     li.appendChild(editBtn)
 
-
     itemList.appendChild(li)
 }
-
 
 //removeItem
 function removeItem(e){
@@ -63,6 +66,30 @@ function removeItem(e){
             itemList.removeChild(li)
         }
     }
+}
 
+
+
+//filterItems
+function filterItems(e){
+    //convert text to lowercase
+    var text = e.target.value.toLowerCase()
+
+    //get list
+    var items = itemList.getElementsByTagName('li')  
+     //this will give HTML collection we need an array
     
+     //convert to an array
+    Array.from(items).forEach(function(item){
+        var itemName = item.firstChild.textContent
+        var itemName2 = item.childNodes[1].textContent
+
+        if (itemName.toLowerCase().indexOf(text) != -1 || itemName2.toLowerCase().indexOf(text) != -1 )
+        {
+            item.style.display = 'block'
+        }else{
+            item.style.display = 'none'
+        }
+
+    })
 }
