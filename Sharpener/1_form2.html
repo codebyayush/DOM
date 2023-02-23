@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+    <style>   
+        label{
+            color: orange;
+            font-size: 15px;
+        }
+        div{
+            border: 2px solid rgb(0, 0, 0); 
+            padding: 5px; 
+            border-radius: 9px;  
+            height: 400px; 
+            width: 700px; 
+            margin: 0 auto;     /*this will position div tag to the center*/
+            background-color: beige;
+        }
+        input{
+            
+            size: 1000px;
+            border: 2px solid black;
+            border-radius: 5px;
+            width: 300px;
+            height: 40px;
+        }
+        input[type="submit"]{
+            
+            background-color: orange;
+            color: white;
+            size: 20px;
+		    padding: 10px 20px;
+			border: none;
+            cursor: pointer;
+			
+        }
+        
+        form
+        {
+            height: 100%;
+            text-align: center;
+        }
+        body{
+            background-image: url("formback.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        h2{
+            text-align: center;
+            color: whitesmoke;
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h2>Book a Call</h2>
+    <h4 style="text-align: center; text-decoration: underline; color: white;">book a call slot and our representative will call within 1hr of selected time.</h4>
+    <hr>
+<div>
+    <form action="#">
+    
+    <label for="name"><b>Name:</b></label>
+    <br>
+    <input type="text" id="name" name="Name" placeholder="name" >
+    <br>
+    <br>
+    <label for="email"><b>Email:</b></label>
+    <br>
+    <input type="text" id="email" name="Email" placeholder="email" required>
+    <br>
+    <br>
+    <label for="phone"><b>Phone:</b></label>
+    <br>
+    <input type="number" id="phone" name="Phone" placeholder="number" required>
+    <br>
+    <br>
+    <label for="date"><b>Time for call:</b></label>
+    <br>
+    <input type="date" id="date" name="time for call" required>
+    <input type="time" id="time" name="time for call" required>
+    <br>
+    <br>
+    
+    <input type="submit" id="getcall" value="GET A CALL" required>
+    
+    </form>
+    
+</div>
+    <script src="dom4.js"></script>
+</body>
+
+</html>
