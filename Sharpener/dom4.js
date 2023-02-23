@@ -9,7 +9,6 @@ submitBtn.addEventListener('click', function() {
   const date = document.getElementById('date').value;
   const time = document.getElementById('time').value;
 
-
   const formData = {
     name: name,
     email: email,
@@ -18,8 +17,15 @@ submitBtn.addEventListener('click', function() {
     time: time
   };
 
+
   localStorage.setItem('formData', JSON.stringify(formData));
+  //JSON.stringify() method is used to convert 
+  // the JavaScript object to a JSON string, 
+  // which is the format required for local storage.
+
+
 });
-//JSON.stringify() method is used to convert 
-// the JavaScript object to a JSON string, 
-// which is the format required for local storage.
+
+console.log(JSON.parse(localStorage.getItem('formData')))
+//JSON.parse method is used to convert the string format of 
+// data stored into object form. 
