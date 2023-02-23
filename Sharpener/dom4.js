@@ -19,6 +19,7 @@ submitBtn.addEventListener('click', function() {
 
 
   localStorage.setItem('formData', JSON.stringify(formData));
+  JSON.parse(localStorage.getItem('formData'))
   //JSON.stringify() method is used to convert 
   // the JavaScript object to a JSON string, 
   // which is the format required for local storage.
