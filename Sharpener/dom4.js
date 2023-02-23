@@ -24,7 +24,6 @@ submitBtn.addEventListener('click', function() {
   // the JavaScript object to a JSON string, 
   // which is the format required for local storage.
 
-
 });
 
 console.log(JSON.parse(localStorage.getItem('formData')))
