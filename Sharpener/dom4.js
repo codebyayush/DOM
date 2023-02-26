@@ -7,10 +7,7 @@ const userList = document.getElementById('items');
 
 
 
-//function to add user info in the display list
-
-
-//to add users in an array (local storage)
+//to add users in (local storage)
 submitBtn.addEventListener('click', function() {
   const name = document.getElementById('name').value;
   const email = document.getElementById('email').value;
@@ -20,7 +17,6 @@ submitBtn.addEventListener('click', function() {
     name: name,
     email: email,
     phone: phone
-    
   };
   let users = [];
 
@@ -29,15 +25,14 @@ submitBtn.addEventListener('click', function() {
   }
 
   users.push(formData);
+  localStorage.setItem(formData.email, formData.name)
 
-
+  
 //this will show user details on display
   const userList = document.getElementById('items')
 
   const nam = document.createElement('li')
   nam.textContent = formData.name + ' - ' + formData.email + ' - ' + formData.phone
-
-
 //
 
 
@@ -46,28 +41,40 @@ submitBtn.addEventListener('click', function() {
   delBtn.type = 'button'
   delBtn.value = 'Delete'
   delBtn.onclick = () => {
-    
-    // let arr = JSON.parse(localStorage.getItem('users'))
-    // let index = arr.indexOf(formData.name)
-    // if (index>-1){
-    //   arr.splice(index, 1);
-    // }
 
+    localStorage.removeItem(formData.email)
+    userList.removeChild(nam)
+  }
+//
+
+//edit button functionality
+  const editBtn = document.createElement('input')
+  editBtn.type = 'button'
+  editBtn.value = 'Edit'
+  
+  editBtn.onclick = () =>{
+    document.getElementById('name').value = formData.name
+    document.getElementById('email').value = formData.email
+    document.getElementById('phone').value = formData.phone
 
     localStorage.removeItem(formData.email)
     userList.removeChild(nam)
   }
   nam.appendChild(delBtn)
+  nam.appendChild(editBtn)
   userList.appendChild(nam)
+//
+  })
+
+  
   
 //
 
-  localStorage.setItem(formData.email, formData.name);
+// localStorage.setItem(formData.email, formData.name);
 
   // JSON.parse(localStorage.getItem('users'))
   //JSON.stringify() method is used to convert 
   // the JavaScript object to a JSON string, 
   // which is the format required for local storage. 
-  })
 
 // console.log(JSON.parse(localStorage.getItem('users')))
